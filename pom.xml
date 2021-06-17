@@ -77,6 +77,7 @@
                         <version>4.3.0</version>
                         <!-- ugly hack for java 11 build until https://github.com/trautonen/coveralls-maven-plugin/issues/112 -->
                         <!-- will be released (coverall-maven-plugin-5.0.0) -->
+                        <!-- some test -->
                         <dependencies>
                             <dependency>
                                 <groupId>javax.xml.bind</groupId>
