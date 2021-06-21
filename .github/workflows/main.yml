@@ -28,9 +28,9 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
+      - name: Verify with Maven
+        run: mvn verify javadoc:javadoc
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Verify with Maven
-        run: mvn verify javadoc:javadoc
