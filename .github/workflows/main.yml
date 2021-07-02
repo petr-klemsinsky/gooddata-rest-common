@@ -29,6 +29,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
       - name: Verify with Maven
+
         run: mvn verify javadoc:javadoc org.jacoco:jacoco-maven-plugin:prepare-agent org.jacoco:jacoco-maven-plugin:report-aggregate
       - name: Upload to Codecov
         uses: codecov/codecov-action@v1.5.0
